@@ -36,15 +36,15 @@ herleiten (s. Buch S. 248f). Es gilt $B=\mu_0 I \frac{n}{e}$. $\frac{n}{e}$ kann
 als Windungsdichte interpretiert werden.
 
 \emph{Beispiel:} $l=40\mathrm{cm}=0,4\mathrm{m}$; $n=30$; $I=2\mathrm{A}$\\
-$B=\mu_0 \cdot I \cdot \frac{n}{e}=4 \pi \cdot 10^{-7} 
+$B=\mu_0 \cdot I \cdot \frac{n}{e}=4 \pi \cdot 10^{-7}
 \frac{\mathrm{Vs}}{\mathrm{Am}}
-\cdot 2\mathrm{A} \cdot \frac{30}{0,4\mathrm{m}}=\frac{4 \pi \cdot 30 \cdot 
-2}{0,4} \cdot 10^{-7} \frac{\mathrm{Vs}}{\mathrm{Am}}= 1900 \cdot 10^{-7} T = 
+\cdot 2\mathrm{A} \cdot \frac{30}{0,4\mathrm{m}}=\frac{4 \pi \cdot 30 \cdot
+2}{0,4} \cdot 10^{-7} \frac{\mathrm{Vs}}{\mathrm{Am}}= 1900 \cdot 10^{-7} T =
 1,9
 \cdot 10^{-4} \mathrm{T} = 0,19 \mathrm{mT}$
 
 \subsubsection{Induktion (qualitativ)}
-\emph{Induktion} bedeutet, dass mit Hilfe eines Magnetfeldes in einem Leiter 
+\emph{Induktion} bedeutet, dass mit Hilfe eines Magnetfeldes in einem Leiter
 ein Strom erzeugt wird bzw. zwischen den Leiterenden eine Spannung messbar wird.
 
 \paragraph{Mögliche Situationen}
@@ -88,9 +88,9 @@ $\Rightarrow \dot{B}~U_{ind}$ %TODO Tilde
 Insgesamt ergibt sich also $U_ind ~ n \cdot A \cdot \dot{B}$. Wie groß ist der
 Proportionalitätsfaktor?
 \begin{enumerate}
-	\item Einheit des Prop.--faktors: $[n]=1$ $[A]=\mathrm{cm^2}$ 
+	\item Einheit des Prop.--faktors: $[n]=1$ $[A]=\mathrm{cm^2}$
 	$[B]=\mathrm{T}=
-		\frac{\mathrm{Vs}}{\mathrm{m^2}}$ 
+		\frac{\mathrm{Vs}}{\mathrm{m^2}}$
 		$[\dot{B}]=\frac{\mathrm{V}}{\mathrm{m^2}}$
 		
 		$\Rightarrow [n \cdot A \cdot \dot{B}]=V=[U_{ind}]$
@@ -98,9 +98,9 @@ Proportionalitätsfaktor?
 		Einheit)
 	\item Wir zeigen anhand der Messwerte, dass der Prop.--faktor 1 ist,
 		dass also gilt: $U_{ind} = n \cdot A \cdot \dot{B}$
-		%TODO n = 1000, A=28cm^2=0,0028m^2, I_max=1, B_max=\mu_0*I_max*n/l = 
+		%TODO n = 1000, A=28cm^2=0,0028m^2, I_max=1, B_max=\mu_0*I_max*n/l =
 		%4\pi *10^-7 Vs/Am *1A 665/0,5m, l=0,5mA, B'=B_max/0,5s
-		%TODO U_ind = n_ind*A_ind*B'_Feld = 
+		%TODO U_ind = n_ind*A_ind*B'_Feld =
 		%1000*0,0028m^2*(4pi*10^-7Vs/Am*1A*665)/0,5m*0,5s
 		%TODO = 2,8*4pi*665/0,5^2 * 10^3*10^-3*10^-7 * VsAm^2/ms
 \end{enumerate}
@@ -114,27 +114,27 @@ eine Induktionsspannung bewirkt. Dies kann hervorgerufen werden durch
 	\item Rotation der Spule im Feld
 \end{enumerate}
 Es gilt hier: $U_{ind} = n_{ind} \cdot \dot{A}_{ind} \cdot B_{Feld}$,
-wobei $[\dot{A}]=\frac{\mathrm{m^2}}{\mathrm{s}}$ die 
+wobei $[\dot{A}]=\frac{\mathrm{m^2}}{\mathrm{s}}$ die
 "`\emph{Flächenänderungsrate}"'. %TODO
 
 Wir legen fest: Der \emph{magnetische Fluss} durch eine Fläche ist (bei
 homogenem Feld) das Produkt aus mgn. Flussdichte mal betrachteter Fläche:
-$\Phi = A \cdot B$ (so ist die Flussdichte $B=\frac{\Phi}{A}$) %TODO 
+$\Phi = A \cdot B$ (so ist die Flussdichte $B=\frac{\Phi}{A}$) %TODO
 %Fluss frac Fläche
 Damitlässt sich das Induktionsgesetz ganz kompakt schreiben:
 $U_{ind} = n \cdot \dot{\Phi}$ (Induktionsspannung ist n mal Änderungsrate
 des magnetischen Flusses)
 
-($\dot{\Phi}=\dot{A \cdot B} = \dot{A} \cdot B + A \cdot \dot{B}$ 
+($\dot{\Phi}=\dot{A \cdot B} = \dot{A} \cdot B + A \cdot \dot{B}$
 (Produktregel))
 
 \subsubsection{Differentialgleichung}
-Fall: Entladung/Ausschalten; Schaltung: $C$ oder $L$ parallel zu $R$ 
+Fall: Entladung/Ausschalten; Schaltung: $C$ oder $L$ parallel zu $R$
 geschalten, also $U_C$ bzw. $U_L$ und $U_R$
 \\ \begin{tabular}{rl|l}
 & Kondensator						& Spule \\ %TODO mathcal==Farbe
 "`Konstanten"'&$R$; $C$				& $R$; $L$ \\
-Zeitabhängige Größen & $Q(t)=\mathcal{Q}$; $U(t)=\mathcal{U}$; 
+Zeitabhängige Größen & $Q(t)=\mathcal{Q}$; $U(t)=\mathcal{U}$;
 	$I(t)=\mathcal{I}$ 				& $U(t)=\mathcal{U}$; $I(t)=\mathcal{I}$ \\
 & $U_C + U_R = 0$ & $U_L + U_R = 0$ \\
 & $\frac{1}{C} \mathcal{Q} + R \cdot \mathcal{I} = 0$ &
@@ -152,6 +152,12 @@ Zeitabhängige Größen & $Q(t)=\mathcal{Q}$; $U(t)=\mathcal{U}$;
 	$\dot{I}(t) = I_0 \cdot e^{\frac{R}{L} \cdot t} \cdot -\frac{R}{L}$ \\
 & Q/I/U-t-Diagramm & I/U-t-Diagramm \\
 \end{tabular}
+\paragraph{Einheitenbetrachtung:} $[\frac{1}{RC}] = \mathrm{\frac{1}{\Omega
+\cdot F} = \frac{1}{\frac{V}{A} \cdot
+\frac{C}{V}} = \frac{A}{C} = \frac{A}{As} = \frac{1}{s}}$;
+$[\frac{R}{L}] = \mathrm{\frac{\Omega}{H} = \frac{\frac{V}{A}}{\frac{Vs}{Am}
+\cdot \frac{m^2}{m}} = \frac{V \cdot Am \cdot m}{Vs \cdot A \cdot m^2} =
+\frac{1}{s}}$
 
 
 \end{document}
