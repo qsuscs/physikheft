@@ -1,3 +1,5 @@
+% !TeX spellcheck = de_DE
+% !TeX encoding = UTF-8
 \documentclass[a4paper]{scrartcl}
 
 \usepackage[utf8]{inputenc}
@@ -5,13 +7,9 @@
 \usepackage[T1]{fontenc}
 %\usepackage{amsmath}
 
-%opening
-\title{}
-\author{}
 
 \begin{document}
 
-%\maketitle
 
 \subsubsection{"`Ausdrücke"' für die magnetische Flussdichte}
 $B:=\frac{F}{I \cdot l}$ $\leftarrow$ Definition, also eine willkürliche
@@ -159,5 +157,36 @@ $[\frac{R}{L}] = \mathrm{\frac{\Omega}{H} = \frac{\frac{V}{A}}{\frac{Vs}{Am}
 \cdot \frac{m^2}{m}} = \frac{V \cdot Am \cdot m}{Vs \cdot A \cdot m^2} =
 \frac{1}{s}}$
 
+
+\section{Mechanik -- Schwingungen und Wellen}
+\subsection{Die Schwingung einer Schraubenfeder}
+\paragraph{Physikalische Größen:} \begin{itemize}
+	\item \emph{Frequenz} $f$ $\mathrm{Hz (Hertz)} = \frac{1}{\mathrm{s}}$
+	\item \emph{Schwingungsdauer} $T$ $\mathrm{s}$ $f = \frac{1}{T}$
+	\item \emph{Amplitude} $\hat{y}$ $\mathrm{m}$
+	\item \emph{"`Kreisfrequenz"'} $\omega = 2 \pi f$ $\frac{1}{\mathrm{s}}$
+	\item \emph{Auslenkung} $y(t)$ $\mathrm{m}$
+	\item \emph{Federkonstante} $D$ $\frac{\mathrm{N}}{\mathrm{m}}$
+	\item \emph{Masse} $m$ $\mathrm{kg}$
+\end{itemize}
+%TODO Bild: Oben "`Decke"', daran befestigt eine Feder, darauf ein grüner Pfeil
+%F_D = D*s (Dehnung der Feder), an der Feder eine Masse, davon nach unten ein
+%roter Pfeil F_G = m*g, neben der Masse in orange "`Gleichgewichts- oder
+%Ruhelage"'
+In der Gleichgewichtslage gilt Kräftegleichheit: $F_D = F_G \rightarrow m \cdot
+g = D \cdot s_0$
+
+\subsubsection{Beschreibung der Schwingung durch eine Differentialgleichung}
+Auftretende Kräfte: Außerhalb der Gleichgewichtslage $s_0$ ist die Federkraft
+$F_D$ größer oder kleiner als $F_G = m \cdot g$, die Konstant ist. Diese
+resultierende Kraft ist die sogen. \emph{rücktreibende Kraft}, die immer in
+richtung Ggl. zeigt. Es gilt: $F_R = F_D + F_G = -Ds + mg = -D(y+s_0) + mg =
+-Dy-Ds_0 + mg = -Dy$ $F_R = -Dy$ %TODO Kasten rum
+
+$F_R$ ist proportional zur Auslenkung aus der Gleichgewichtslage $y=0$!
+(\emph{lineares Kraftgesetz})\\
+$F_R$ ist damit die die Masse $m$ beschleunigende Kraft $F=m \cdot a$. Also: $F
+= F_R \rightarrow m \cdot a(t) = -D \cdot y(t)$. Da $\dot{y}(t) = v(t)$ und
+$\dot{v}(t) = a(t)$ gilt $m \cdot \ddot{y}(t) = -D \cdot y(t)$
 
 \end{document}
