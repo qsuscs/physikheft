@@ -178,7 +178,7 @@ g = D \cdot s_0$
 
 \subsubsection{Beschreibung der Schwingung durch eine Differentialgleichung}
 Auftretende Kräfte: Außerhalb der Gleichgewichtslage $s_0$ ist die Federkraft
-$F_D$ größer oder kleiner als $F_G = m \cdot g$, die Konstant ist. Diese
+$F_D$ größer oder kleiner als $F_G = m \cdot g$, die konstant ist. Diese
 resultierende Kraft ist die sogen. \emph{rücktreibende Kraft}, die immer in
 richtung Ggl. zeigt. Es gilt: $F_R = F_D + F_G = -Ds + mg = -D(y+s_0) + mg =
 -Dy-Ds_0 + mg = -Dy$ $F_R = -Dy$ %TODO Kasten rum
@@ -187,6 +187,31 @@ $F_R$ ist proportional zur Auslenkung aus der Gleichgewichtslage $y=0$!
 (\emph{lineares Kraftgesetz})\\
 $F_R$ ist damit die die Masse $m$ beschleunigende Kraft $F=m \cdot a$. Also: $F
 = F_R \rightarrow m \cdot a(t) = -D \cdot y(t)$. Da $\dot{y}(t) = v(t)$ und
-$\dot{v}(t) = a(t)$ gilt $m \cdot \ddot{y}(t) = -D \cdot y(t)$
+$\dot{v}(t) = a(t)$ gilt $m \cdot \ddot{y}(t) = -D \cdot y(t)$. Geteilt durch
+$m$ ergibt sich $\ddot{y}(t) = -\frac{D}{m} \cdot y(t)$
+
+Diese DGL hat die Struktur $f''(x) = -k \cdot f(x)$. Diese wird gelöst durch
+die trigonometrischen Funktionen $\sin(x)$/$\cos(x)$ bzw. genauer $f(x) =
+\sin(\sqrt{k}x)$. Denn $f'(x) = \sqrt{k} \cos(\sqrt{k}x)$ und $f''(x) =
+-\sqrt{k}^2 \sin(\sqrt{k}x) = -k \sin(\sqrt{k}x)$
+
+Lösung: $y(t) = \hat{y} \cdot \sin(\sqrt{\frac{D}{m}}t)$ ($[\hat{y}] =
+\mathrm{m}$; $[\sqrt{\frac{D}{m}}][t] = \mathrm{s} \rightarrow
+[\sqrt{\frac{D}{m}}] = \frac{1}{\mathrm{s}}$
+\\
+$[\frac{D}{m}] = \frac{\mathrm{N}}{\mathrm{m \cdot kg}} =
+\frac{1}{\mathrm{s^2}} \rightarrow [\sqrt{\frac{D}{m}}] = \frac{1}{\mathrm{s}}$
+\\
+$v(t) = \dot{y}(t) = \sqrt{\frac{D}{m}} \cdot \hat{y} \cdot
+\cos(\sqrt{\frac{D}{m}}t)$; $\sqrt{\frac{D}{m}} \cdot \hat{y} = \hat{v}$
+\\
+$a(t) = \ddot{y}(t) = -\sqrt{\frac{D}{m}}^2 \cdot \hat{y} \cdot
+\sin(\frac{D}{m} \cdot t)$; $-\sqrt{\frac{D}{m}}^2 \cdot \hat{y} = \hat{a}$,
+$\hat{y} \cdot \sin(\frac{D}{m} \cdot t) = y(t)$
+
+Zusammenhang zwischen $y(t) = \hat{y} \sin(\sqrt{\frac{D}{m}} t)$ mit $f$ bzw.
+$T$ der Schwingung: Periodendauer/länge: $\sqrt{\frac{D}{m}} \cdot T = 2 \pi$,
+d.h. $T=\frac{2 \pi}{\sqrt{\frac{D}{m}}} = 2 \pi \sqrt{\frac{m}{D}}$ $f=2 \pi f
+= \sqrt{\frac{D}{m}} = \omega$
 
 \end{document}
