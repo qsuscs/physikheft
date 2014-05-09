@@ -130,7 +130,7 @@ des magnetischen Flusses)
 Fall: Entladung/Ausschalten; Schaltung: $C$ oder $L$ parallel zu $R$
 geschalten, also $U_C$ bzw. $U_L$ und $U_R$
 \\ \begin{tabular}{rl|l}
-& Kondensator						& Spule \\ %TODO mathcal==Farbe
+& Kondensator						& Spule \\
 "`Konstanten"'&$R$; $C$				& $R$; $L$ \\
 Zeitabhängige Größen & $Q(t)=\mathcal{Q}$; $U(t)=\mathcal{U}$;
 	$I(t)=\mathcal{I}$ 				& $U(t)=\mathcal{U}$; $I(t)=\mathcal{I}$ \\
@@ -146,7 +146,7 @@ Zeitabhängige Größen & $Q(t)=\mathcal{Q}$; $U(t)=\mathcal{U}$;
 & $\mathcal{Q} = Q(t) = Q_0 \cdot e^{-\frac{1}{RC} \cdot t}$ &
 	$\mathcal{I} = I(t) = I_0 \cdot e^{-\frac{R}{L} \cdot t}$ \\
 & entsprechend auch für $U(t)$ und $I(t)$ & entsprechend auch für $U(t)$ \\
-\emph{"'Probe"':} & $\dot{Q} = Q_0 \cdot e^{-\frac{1}{RC} \cdot t}$ &
+\emph{"`Probe"':} & $\dot{Q} = Q_0 \cdot e^{-\frac{1}{RC} \cdot t}$ &
 	$\dot{I}(t) = I_0 \cdot e^{\frac{R}{L} \cdot t} \cdot -\frac{R}{L}$ \\
 & Q/I/U-t-Diagramm & I/U-t-Diagramm \\
 \end{tabular}
@@ -184,7 +184,7 @@ richtung Ggl. zeigt. Es gilt: $F_R = F_D + F_G = -Ds + mg = -D(y+s_0) + mg =
 -Dy-Ds_0 + mg = -Dy$ $F_R = -Dy$ %TODO Kasten rum
 
 $F_R$ ist proportional zur Auslenkung aus der Gleichgewichtslage $y=0$!
-(\emph{lineares Kraftgesetz})\\
+(\emph{lineares Kraftgesetz}).
 $F_R$ ist damit die die Masse $m$ beschleunigende Kraft $F=m \cdot a$. Also: $F
 = F_R \rightarrow m \cdot a(t) = -D \cdot y(t)$. Da $\dot{y}(t) = v(t)$ und
 $\dot{v}(t) = a(t)$ gilt $m \cdot \ddot{y}(t) = -D \cdot y(t)$. Geteilt durch
@@ -213,5 +213,31 @@ Zusammenhang zwischen $y(t) = \hat{y} \sin(\sqrt{\frac{D}{m}} t)$ mit $f$ bzw.
 $T$ der Schwingung: Periodendauer/länge: $\sqrt{\frac{D}{m}} \cdot T = 2 \pi$,
 d.h. $T=\frac{2 \pi}{\sqrt{\frac{D}{m}}} = 2 \pi \sqrt{\frac{m}{D}}$ $f=2 \pi f
 = \sqrt{\frac{D}{m}} = \omega$
+
+\subsection{Überblick: \emph{Harmonischer Oszillator} (HO)}
+Ein schwingungsfähiges System liegt dann vor, wenn ein Körper/eine Masse durch
+eine \emph{rücktreibende Kraft} in Richtung einer \emph{Ruhelage} beschleunigt
+wird. Ist diese rücktreibende Kraft "`\emph{linear}"' ($F_R=-Dy$), d.h.
+proportional zur Auslenkung aus der Ruhelage, so ergibt sich eine
+\emph{harmonische} Schwingung, d.h. die Auslenkungsfunktion $y(t)$ ist
+\emph{sinusförmig}. Die Größe $D$ ist beim Federpendel die
+\emph{Federkonstante}, bei anderen Systemen wird sie allg. als
+\emph{Richtgröße} bezeichnet. Für den HO gilt allgemein:\\
+Kräftegleichung $F_a=F_R \rightarrow m \cdot \ddot{y}=-D\cdot y(t)$ DGL mit:
+$y(t) = \hat{y} \cdot \sin(\omega t);\, v(t) = \dot{y}(t) = \omega \cdot
+\hat{y} \cos(\omega t),\, (\omega \cdot \hat{y}=\hat{v});\, a(t)=\ddot{y}(t) =
+- \omega^2 \hat{y} \sin(\omega t),\, (\omega^2 \hat{y}=\hat{a})$ und
+$\omega^2=\frac{D}{m}$ bzw. $\omega=\sqrt{\frac{D}{m}}$ und $\omega = 2 \pi f$
+und $T = \frac{1}{f}$
+
+\subsection{Energie des HO}
+Im HO auftretende Energieformen: $\mathcal{E}_{kin}$ und $\mathcal{E}_{pot}$
+(enthält Spannenergie der Feder und Lageenergie der Masse) mit
+$\mathcal{E}_{kin} = \frac{1}{2}mv^2$ und $\mathcal{E}_{spn} =
+\mathcal{E}_{pot} = \frac{1}{2}Dy^2 = \int F(s) ds$. Mit $v(t) = \hat{v}
+\cos(\omega t)$ und $y(t) = \hat{y} \cdot \sin(\omega t)$ ergibt sich
+$\mathcal{E}_{kin}(t) = \frac{1}{2} m (\hat{v} \cos(\omega t))^2 = \frac{1}{2}
+m \hat{v}^2 \cos^2(\omega t)$ und $\mathcal{E}_{pot}(t) = \frac{1}{2} D
+(\hat{y} \sin(\omega t))^2 = \frac{1}{2} D \hat{y}^2 \sin^2(\omega t)$
 
 \end{document}
