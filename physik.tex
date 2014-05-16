@@ -37,7 +37,7 @@ kann als Windungsdichte interpretiert werden.
 \(I=2\mathrm{A}\)\\
 \(B=\mu_0 \cdot I \cdot \frac{n}{e}=4 \pi \cdot 10^{-7}
 \frac{\mathrm{Vs}}{\mathrm{Am}} \cdot 2\mathrm{A} \cdot
-\frac{30}{0,4\mathrm{m}}=\frac{4 \pi \cdot 30 \cdot 2}{0,4} \cdot 10^{-7} 
+\frac{30}{0,4\mathrm{m}}=\frac{4 \pi \cdot 30 \cdot 2}{0,4} \cdot 10^{-7}
 \frac{\mathrm{Vs}}{\mathrm{Am}}= 1900 \cdot 10^{-7} T = 1,9 \cdot 10^{-4}
 \mathrm{T} = 0,19 \mathrm{mT}\)
 
@@ -274,5 +274,27 @@ Konkret:
 		\cos^2(\omega t) = 1\))
 		\\
 		außerdem: \(\sin^2(\omega t) = \frac{1}{2} \sin^2 (2 \omega t) + 0,5\)
+	\item \(\mathcal{E}_{pot}(y) = \frac{1}{2} D y^2(t) = \frac{1}{2}D y^2\)
+		\\
+		\( \mathcal{E}_{kin}(y) = \frac{1}{2} m v^2(t) =  \frac{1}{2} m (\omega
+		\cdot \hat{y} \cos(\omega t))^2 = \frac{1}{2} m \omega^2 \hat{y}^2
+		\cos^2(\omega t) = \frac{1}{2} D \hat{y}^2 \cos^2(\omega t) =
+		\frac{1}{2} D \hat{y}^2 ( 1 - \sin^2(\omega t) ) = \frac{1}{2} D
+		\hat{y}^2 - \frac{1}{2} D \hat{y}^2 \sin^2(\omega t) = \frac{1}{2} D
+		\hat{y}^2 - \frac{1}{2} D y^2 = \mathcal{E}_{ges} -
+		\mathcal{E}_{pot} \); \( \cos^2(\omega t) = 1 - \sin^2(\omega t);\,
+		\hat{y}^2 \sin^2(\omega t) = y^2 \)
 \end{enumerate}
+\emph{Frage:} Für welchen Wert von \(y\) ist \( \mathcal{E}_{kin} =
+\mathcal{E}_{pot} \)? \( \frac{1}{2}Dy^2 = \frac{1}{2}D\hat{y}^2 - \frac{1}{2}
+Dy^2 \Rightarrow y = \sqrt{\frac{1}{2}}\hat{y} \)
+
+\subsection{Das Fadenpendel}
+% Zeichnung #0a0e7267-fb46-40f4-80d2-c7605effecab
+\begin{enumerate}
+	\item Rücktreibende Kraft\\
+		\( \frac{F_R}{F_G} = \sin(\alpha) \Rightarrow F_R = F_G \cdot
+		\sin(\alpha);\, F_R = m \cdot g \cdot \sin(\alpha) \)
+\end{enumerate}
+
 \end{document}
