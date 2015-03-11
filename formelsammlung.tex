@@ -1,0 +1,166 @@
+\documentclass[paper = a4, twocolumn]{scrartcl}
+
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+\usepackage{polyglossia}
+\setmainlanguage[spelling = new]{german}
+
+\usepackage{geometry}
+\geometry{top = 1.9cm, left = 1.9cm, right = 1.9cm}
+
+\usepackage{hyperref}
+
+\usepackage{fixltx2e}
+
+\DeclareRobustCommand{\E}{\mathcal{E}}
+
+\title{Formelsammlung Physik}
+\author{T.~Schneider, R.~Hofmann, M.~Wolfart, D.~Muffler}
+\date{Abitur 2015}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Elektrisches Feld}
+\begin{itemize}
+\item
+	\( E = \frac{F}{q} \)
+\item
+	\( \Delta Q = \frac{I}{\Delta t} \)
+\item
+	\( \dot{Q} = I \)
+\item
+	\( U = \frac{\Delta E}{\Delta Q} \)
+\item
+	\( U = \Delta \Phi \)
+\item
+	\( R = \frac{U}{I} \)
+\item
+	\( \Sigma = \frac{Q}{A} = \epsilon_0 \cdot E \) (Flächenladungsdichte)
+\item
+	\( E = \frac{q}{4 \cdot \pi \cdot \epsilon_0} \cdot \frac{Q}{r^2} \)
+	(Feldstärke einer geladenen Kugel)
+\item
+	\( F = \frac{1}{4 \cdot \pi \cdot \epsilon_0} \cdot \frac{Q_1 Q_2}{r^2} \)
+\item
+	\( P = U \cdot I \)
+\item
+	\( \E = P \cdot t \Rightarrow P = \frac{\Delta \E}{\Delta t} \)
+\item
+	\( \E = eU \)
+\item
+	\( \frac{e}{m_e} \) (spezifische Ladung)
+\end{itemize}
+
+\subsection{Kondensator}
+\begin{itemize}
+\item
+	\( C = \frac{Q}{U} \)
+\item
+	\( C = \epsilon_0 \epsilon_r \cdot \frac{A}{d} \)
+\item
+	\( \E = \frac{1}{2} C U^2 \)
+\item
+	\( p_e = \frac{1}{2} \epsilon_0 E^2 \) (Energiedichte)
+\item
+	\( p_e = \frac{\E}{V} \)
+\item
+	\( \E = F \cdot d = q \cdot E \cdot d \)
+\item
+	\( E = \frac{U}{d} \)
+\item
+	\( \Phi = E \cdot d \)
+\item
+	\( \Sigma = \epsilon_0 \cdot E \)
+\end{itemize}
+
+\subsection{Braun’sche Röhre}
+\begin{itemize}
+\item
+	\( \frac{v_y}{v_x} = \frac{y_1 - y_s}{B} \)
+\item
+	\( v = \sqrt{2 \cdot \frac{E}{m} \cdot U_a} \)
+\item
+	\( y_1 = \frac{1}{2} \cdot \frac{U}{d} \cdot \frac{1}{U_a} \cdot s \cdot (b
+	+ \frac{s}{2} ) \)
+\end{itemize}
+
+\subsection{Differentialgleichungen}
+\subsubsection{Entladung}
+\begin{itemize}
+\item
+	\( U_C + U_R - |U_0| = 0 \)
+\item
+	\( U_0 = 0 \)
+\item
+	\( \frac{Q(t)}{C} + I(t) \cdot R = 0 \)
+\item
+	\( I(t) = \dot{Q}(t) \)
+\item
+	\( \dot{Q}(t) = -\frac{1}{RC} \cdot Q(t) \)
+\item[\(\Rightarrow\)]
+	\( Q(t) = Q_0 \cdot e^{-\frac{1}{RC}} \)
+\item
+	\( I(t) = I_0 \cdot e^{-\frac{1}{RC} \cdot t} \)
+\item
+	\( I_0 = \frac{U_0}{R} \)
+\item
+	\( U(t) = -U_0 \cdot e^{-\frac{1}{RC}} \)
+\item
+	\( U_0 = R \cdot I(0) \)
+\end{itemize}
+
+\subsubsection{Aufladung}
+\begin{itemize}
+\item
+	\( Q(t) = -Q_0 \cdot (1 - e^{-\frac{1}{RC}}) \)
+\item
+	\( U(t) = -U_0 \cdot (1 - e^{-\frac{1}{RC}}) \)
+\item
+	\( I(t) = I_0 \cdot  e^{-\frac{1}{RC}} \)
+\item
+	\( I_0 = \frac{U_0}{R} \)
+\end{itemize}
+
+\subsection{Schwingkreis}
+\( f_0 = \frac{1}{2 \pi \sqrt{LC}} \) (Thomson’sche Schwingkreisformel)
+
+\section{Magnetisches Feld}
+ниггэр
+\begin{itemize}
+\item
+	\( B = \frac{F}{I \cdot l} = \frac{F}{Q \cdot v} \)
+\item
+	Gerader stromdurchflossener Leiter:\\
+	\( B = \mu_0 \cdot \frac{I}{2 \pi r} \)
+\item
+	\( B = \mu_0 \mu_R \cdot I \cdot \frac{n}{l} \)
+\item
+	\( \left( H = \frac{F}{q_{mag}}\ \mathrm{(magnetische\ Feldstärke)} \right)
+	\)
+\item
+	\( F_L = I \cdot l \cdot B \cdot \sin \alpha = n \cdot q \cdot v \cdot B
+	\cdot \sin \alpha \)
+\end{itemize}
+
+\subsection{Индукция – Induktion}
+\begin{itemize}
+\item
+	\( U_{ind} = -n \cdot \dot{\Phi} \)
+\item
+	\( \dot{\Phi} = \dot{A} \cdot B + A \cdot \dot{B} \)
+\item
+	\(\left(  U_{ind} = b \cdot B \cdot v \right)\)
+\item
+	\( \dot{B} = \mu_0 \mu_R \cdot \dot{I} \cdot \frac{n}{l} \)
+\item
+	\( U_{ind} = -L \cdot \dot{I} = -U_L \)
+\item
+	\( L = \mu_0 \mu_r \cdot \frac{n^2}{l} \cdot A \)
+\end{itemize}
+
+\end{document}
