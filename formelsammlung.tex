@@ -1,12 +1,15 @@
 \documentclass[paper = a4, twocolumn]{scrartcl}
 
 \usepackage{fontspec}
+\defaultfontfeatures{Mapping = tex-text, Ligatures = TeX}
 \setmainfont{CMU Serif}
 \setsansfont{CMU Sans Serif}
 \setmonofont{CMU Typewriter Text}
 
+\usepackage{amsfonts}
+
 \usepackage{polyglossia}
-\setmainlanguage[spelling = new]{german}
+\setmainlanguage[spelling = new, babelshorthands = true]{german}
 
 \usepackage{geometry}
 \geometry{top = 1.9cm, left = 1.9cm, right = 1.9cm}
@@ -76,6 +79,8 @@
 	\( \Phi = E \cdot d \)
 \item
 	\( \Sigma = \epsilon_0 \cdot E \)
+\item
+	\( I(t) = \frac{U}{R} = \frac{U_0 - L \cdot \dot{I}(t)}{R} \)
 \end{itemize}
 
 \subsection{Braun’sche Röhre}
@@ -130,7 +135,6 @@
 \( f_0 = \frac{1}{2 \pi \sqrt{LC}} \) (Thomson’sche Schwingkreisformel)
 
 \section{Magnetisches Feld}
-ниггэр
 \begin{itemize}
 \item
 	\( B = \frac{F}{I \cdot l} = \frac{F}{Q \cdot v} \)
@@ -147,20 +151,189 @@
 	\cdot \sin \alpha \)
 \end{itemize}
 
-\subsection{Индукция – Induktion}
+\subsection{Индукция -- Induktion}
 \begin{itemize}
 \item
 	\( U_{ind} = -n \cdot \dot{\Phi} \)
 \item
-	\( \dot{\Phi} = \dot{A} \cdot B + A \cdot \dot{B} \)
+	\( \dot{\Phi} = \dot{A} \cdot B + A \cdot \dot{B}; \quad \dot{A} = d \cdot
+	v(t) = d \cdot \frac{s}{t} \)
 \item
 	\(\left(  U_{ind} = b \cdot B \cdot v \right)\)
 \item
 	\( \dot{B} = \mu_0 \mu_R \cdot \dot{I} \cdot \frac{n}{l} \)
 \item
+	\( \E_{mag} = \frac{1}{2} \cdot L \cdot I^2 \)
+\item
+	\( p_{mag} = \frac{1}{2} \cdot \mu_0 \mu_R \cdot B^2 \)
+\item
+	\( U = \hat{U} \cdot \sin(\omega t) \) (Erzeugung von Wechselspannung)
+\item
+	\( \hat{U} = n \cdot B \cdot A \cdot \omega \)
+\end{itemize}
+
+\subsubsection{Selbstinduktion}
+\begin{itemize}
+\item
 	\( U_{ind} = -L \cdot \dot{I} = -U_L \)
 \item
 	\( L = \mu_0 \mu_r \cdot \frac{n^2}{l} \cdot A \)
 \end{itemize}
+
+\subsection{Entladung der Spule}
+\begin{itemize}
+\item
+	\( I(t) = -I_0 \cdot e^{-\frac{R}{L} \cdot t} \)
+\item
+	\( U_L(t) = U_0 \cdot e^{-\frac{R}{L} \cdot t} \)
+\end{itemize}
+
+\subsection{Aufladung der Spule}
+\begin{itemize}
+\item
+	\( I(t) = -I_0 \cdot (1 - e^{-\frac{R}{L} \cdot t} ) \)
+\item
+	\( U_L(t) = -U_0 \cdot e^{-\frac{R}{L} \cdot t} \)
+\item
+	\( I_0 = \frac{U_0}{R} \)
+\end{itemize}
+
+\section{Mechanische Schwingungen und Wellen}
+\begin{itemize}
+\item
+	\( \E_{kin} = \frac{1}{2} m v^2 \)
+\item
+	\( \E_{pot} = m \cdot g \cdot h \)
+\item
+	\( F = m \cdot a \)
+\item
+	\( F_G = m \cdot g \)
+\item
+	\( \phi_{grav} = \frac{\E_{pot}}{m} = g \cdot h \)
+\item
+	\( p = m \cdot v \)
+\item
+	\( \omega = 2 \pi f = \frac{v}{r} \)
+\item
+	\( f = T^{-1} \)
+\item
+	\( s = \frac{1}{2} \cdot a \cdot t^2 \)
+\item
+	\( v = a \cdot t \)
+\item
+	\( F_D = D \cdot s \)
+\end{itemize}
+
+\subsection{Harmonischer Oszillator}
+\begin{itemize}
+\item
+	\( \omega = \sqrt{\frac{D}{m}} \)
+\item
+	\( \E_{pot} = \frac{1}{2} \cdot D \cdot y^2 \quad (y = s) \)
+\item
+	\( \E_{kin} = \frac{1}{2} v^2(t) \cdot m = \frac{1}{2} \cdot D \cdot
+	\hat{y}^2 - \frac{1}{2} \cdot D \cdot y^2(t) \)
+\item
+	\( \E_{ges} = \frac{1}{2} \cdot D \cdot \hat{y}^2 \)
+\end{itemize}
+
+\subsection{Federpendel}
+\begin{itemize}
+\item
+	\( F_R = -F_D + F_G = -D \cdot y \)
+\item
+	\( y(t) = \hat{y} \cdot \sin(\omega t) \)
+\item
+	\( \omega = \sqrt{\frac{D}{m}} \)
+\end{itemize}
+
+\subsection{Fadenpendel}
+\begin{itemize}
+\item
+	\( F_R = m \cdot g \cdot \sin \alpha = - \frac{m \cdot g}{l} \cdot x \)\\
+	\( F_G = F_R \)
+\item
+	\( \omega = \sqrt{\frac{g}{l}} \)
+\item
+	\( x(t) = \hat{x} \cdot \sin(\omega t) \)
+\item
+	\( \hat{x} = \alpha \cdot l \)
+\end{itemize}
+
+\subsection{Wellengleichung}
+\begin{itemize}
+\item
+	\( y(x; t) = \hat{y} \cdot \sin(2 \pi \cdot (\frac{t}{T} -
+	\frac{x}{\lambda}) ) \)
+\end{itemize}
+
+\subsection{Stehende Welle}
+\begin{itemize}
+\item
+	\( c = \lambda \cdot f \)
+\item
+	\( f_0 = \frac{c}{k \cdot l}; \quad k \in \mathbb{N}; k > 1 \)
+\end{itemize}
+
+\subsection{Schwebung}
+\begin{itemize}
+\item
+	\( \Delta f_s = f_1 - f_2 \) (Schwebungsfrequenzbereich)
+\item
+	\( f_s = \frac{f_1 + f_2}{2} \) (Frequenz der Schwebung)
+\end{itemize}
+
+\section{Elektromagnetische Schwingungen und Wellen}
+\subsection{Brechung}
+\begin{itemize}
+\item
+	\( \frac{\sin \alpha}{\sin \beta} = \frac{c_1}{c_2} = n \)
+\item
+	\( n_{1/2} = \frac{n_2}{n_1} \)
+\item
+	\( n_2 > n_1 \)
+\end{itemize}
+
+\subsubsection{Totalreflexion}
+\begin{itemize}
+\item
+	\( \sin \beta_T = \frac{n_1}{n_2} = \frac{1}{n}; \quad n_2 > n_1 \)
+\end{itemize}
+
+\subsection{Verknüpfung elektrischer und magnetischer Wechselfelder}
+\begin{itemize}
+\item
+	\( E = B \cdot c \)
+\item
+	\( c = \frac{1}{\sqrt{\epsilon_0 \cdot \mu_0}} \)
+\end{itemize}
+
+\subsection{Interferenz}
+\begin{itemize}
+\item
+	\( a_k = \frac{\Delta s}{d} \cdot l; \quad \Delta s = k \cdot \lambda \)
+	(Maximumsbedingung bei Doppelspalt (\( k \in \mathbb{Z} \)),
+	Minimumsbedingung bei Einzelspalt (\( k \in \mathbb{Z}\textbackslash\{0\}
+	\))
+\item
+	\( a_k = \frac{\Delta s}{d} \cdot l; \quad \Delta s = (k + \frac{1}{2})
+	\cdot \lambda \) (Minimumsbedingung bei Doppelspalt (\( k \in
+	\mathbb{Z} \)), Maximumsbedingung bei Einzelspalt (\( k
+	\in \mathbb{Z} \))
+\end{itemize}
+
+\subsubsection{Gitter}
+\begin{itemize}
+\item
+	\( \Delta s = \sin(\alpha) \cdot g \quad \Rightarrow \quad k \cdot
+	\frac{\lambda}{g} < 1 \)
+\item
+	\( a_k = l \cdot \tan(\arcsin(k \cdot \frac{\lambda}{g})) \)
+\end{itemize}
+
+\subsubsection{Brewster-Winkel}
+\( \tan \alpha = n \)
+
+\section{Quantenphysik}
 
 \end{document}
