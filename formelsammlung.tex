@@ -21,7 +21,7 @@
 \DeclareRobustCommand{\E}{\mathcal{E}}
 
 \title{Formelsammlung Physik}
-\author{T.~Schneider, R.~Hofmann, M.~Wolfart, D.~Muffler}
+\author{T.~Schneider, R.~Hofmann, M.~Wolfart, D.~Muffler, N.~Schuller}
 \date{Abitur 2015}
 
 \begin{document}
@@ -33,28 +33,30 @@
 \item
 	\( E = \frac{F}{q} \)
 \item
-	\( \Delta Q = \frac{I}{\Delta t} \)
+	\( I = \frac{\Delta Q}{\Delta t} \)
 \item
-	\( \dot{Q} = I \)
+	\( I = \dot{Q} \)
 \item
 	\( U = \frac{\Delta E}{\Delta Q} \)
 \item
-	\( U = \Delta \Phi \)
+	\( U = \Delta \varphi \)
 \item
 	\( R = \frac{U}{I} \)
 \item
-	\( \Sigma = \frac{Q}{A} = \epsilon_0 \cdot E \) (Flächenladungsdichte)
+	\( \sigma = \frac{Q}{A} = \varepsilon_0 \cdot E \)
+	(Flächenladungsdichte)
 \item
-	\( E = \frac{q}{4 \cdot \pi \cdot \epsilon_0} \cdot \frac{Q}{r^2} \)
+	\( E = \frac{1}{4 \cdot \pi \cdot \varepsilon_0} \cdot \frac{Q}{r^2} \)
 	(Feldstärke einer geladenen Kugel)
 \item
-	\( F = \frac{1}{4 \cdot \pi \cdot \epsilon_0} \cdot \frac{Q_1 Q_2}{r^2} \)
+	\( F = \frac{1}{4 \cdot \pi \cdot \varepsilon_0} \cdot \frac{Q_1 Q_2}{r^2} \)
 \item
 	\( P = U \cdot I \)
 \item
-	\( \E = P \cdot t \Rightarrow P = \frac{\Delta \E}{\Delta t} \)
+	\( \Delta \E = P \cdot \Delta t \Leftrightarrow P = \frac{\Delta
+	\E}{\Delta t} \mbox{ bzw. } P=\dot{\E} \)
 \item
-	\( \E = eU \)
+	\( \E = qU \)
 \item
 	\( \frac{e}{m_e} \) (spezifische Ladung)
 \end{itemize}
@@ -64,26 +66,28 @@
 \item
 	\( C = \frac{Q}{U} \)
 \item
-	\( C = \epsilon_0 \epsilon_r \cdot \frac{A}{d} \)
+	\( C = \varepsilon_0 \varepsilon_r \cdot \frac{A}{d} \)
 \item
 	\( \E = \frac{1}{2} C U^2 \)
 \item
-	\( p_e = \frac{1}{2} \epsilon_0 E^2 \) (Energiedichte)
+	\( \rho_e = \frac{1}{2} \varepsilon_0 E^2 \) (Energiedichte)
 \item
-	\( p_e = \frac{\E}{V} \)
+	\( \rho_e = \frac{\E}{V} \)
 \item
 	\( \E = F \cdot d = q \cdot E \cdot d \)
 \item
 	\( E = \frac{U}{d} \)
 \item
-	\( \Phi = E \cdot d \)
+	\( U = E \cdot d \)
 \item
-	\( \Sigma = \epsilon_0 \cdot E \)
+	\( \sigma = \varepsilon_0 \cdot E \)
 \item
 	\( I(t) = \frac{U}{R} = \frac{U_0 - L \cdot \dot{I}(t)}{R} \)
 \end{itemize}
 
 \subsection{Braun’sche Röhre}
+
+nicht merken. Herleitung evtl.\ wissen
 \begin{itemize}
 \item
 	\( \frac{v_y}{v_x} = \frac{y_1 - y_s}{B} \)
@@ -94,7 +98,7 @@
 	+ \frac{s}{2} ) \)
 \end{itemize}
 
-\subsection{Differentialgleichungen}
+\subsection{Auf-  und Entladung eines Kondensators}
 \subsubsection{Entladung}
 \begin{itemize}
 \item
@@ -147,11 +151,12 @@
 	\( \left( H = \frac{F}{q_{mag}}\ \mathrm{(magnetische\ Feldstärke)} \right)
 	\)
 \item
-	\( F_L = I \cdot l \cdot B \cdot \sin \alpha = n \cdot q \cdot v \cdot B
-	\cdot \sin \alpha \)
+	\( F_L = I \cdot l \cdot B \cdot \sin \alpha  \)
+\item
+	\( F_L =  q \cdot v \cdot B \cdot \sin \alpha \)
 \end{itemize}
 
-\subsection{Индукция -- Induktion}
+\subsection{Induktion}
 \begin{itemize}
 \item
 	\( U_{ind} = -n \cdot \dot{\Phi} \)
@@ -165,7 +170,7 @@
 \item
 	\( \E_{mag} = \frac{1}{2} \cdot L \cdot I^2 \)
 \item
-	\( p_{mag} = \frac{1}{2} \cdot \mu_0 \mu_R \cdot B^2 \)
+	\( \rho_{mag} = \frac{1}{2} \cdot \mu_0 \mu_R \cdot B^2 \)
 \item
 	\( U = \hat{U} \cdot \sin(\omega t) \) (Erzeugung von Wechselspannung)
 \item
@@ -180,7 +185,7 @@
 	\( L = \mu_0 \mu_r \cdot \frac{n^2}{l} \cdot A \)
 \end{itemize}
 
-\subsection{Entladung der Spule}
+\subsection{„Abschalten“ der Spule}
 \begin{itemize}
 \item
 	\( I(t) = -I_0 \cdot e^{-\frac{R}{L} \cdot t} \)
@@ -188,7 +193,7 @@
 	\( U_L(t) = U_0 \cdot e^{-\frac{R}{L} \cdot t} \)
 \end{itemize}
 
-\subsection{Aufladung der Spule}
+\subsection{„Einschalten“ der Spule}
 \begin{itemize}
 \item
 	\( I(t) = -I_0 \cdot (1 - e^{-\frac{R}{L} \cdot t} ) \)
@@ -274,7 +279,13 @@
 \item
 	\( c = \lambda \cdot f \)
 \item
-	\( f_0 = \frac{c}{k \cdot l}; \quad k \in \mathbb{N}; k > 1 \)
+	\( \lambda_k = 2l/(k+1) \quad k \in \mathbb{N}\)\\
+	(Wellenlängenbedingung bei gleichen Enden)
+\item
+	\( \lambda_k = 4l/(2k+1) \quad k \in \mathbb{N}\)\\
+	(ein freies und ein festes Ende)
+\item
+	\( f_k = \frac{c}{\lambda_k} \quad k \in \mathbb{N}\)
 \end{itemize}
 
 \subsection{Schwebung}
