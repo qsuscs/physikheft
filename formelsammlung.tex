@@ -19,6 +19,8 @@
 \usepackage{fixltx2e}
 
 \DeclareRobustCommand{\E}{\mathcal{E}}
+\makeatletter\def\itemb{\@ifnextchar[{\itembb}{\itembb[\@itemlabel ]}}
+\def\itembb[#1]#2{\item[#1]\fbox{#2}}\makeatother
 
 \title{Formelsammlung Physik}
 \author{T.~Schneider, R.~Hofmann, M.~Wolfart, D.~Muffler, N.~Schuller}
@@ -30,12 +32,14 @@
 
 \section{Elektrisches Feld}
 \begin{itemize}
-\item
+\itemb{
 	\( E = \frac{F}{q} \)
+}
 \item
 	\( I = \frac{\Delta Q}{\Delta t} \)
-\item
+\itemb{
 	\( I = \dot{Q} \)
+}
 \item
 	\( U = \frac{\Delta E}{\Delta Q} \)
 \item
@@ -48,51 +52,61 @@
 \item
 	\( E = \frac{1}{4 \cdot \pi \cdot \varepsilon_0} \cdot \frac{Q}{r^2} \)
 	(Feldstärke einer geladenen Kugel)
-\item
-	\( F = \frac{1}{4 \cdot \pi \cdot \varepsilon_0} \cdot \frac{Q_1 Q_2}{r^2} \)
+\itemb{
+	\( F = \frac{1}{4 \cdot \pi \cdot \varepsilon_0} \cdot \frac{Q_1 Q_2}{r^2}
+	\)
+}
 \item
 	\( P = U \cdot I \)
 \item
-	\( \Delta \E = P \cdot \Delta t \Leftrightarrow P = \frac{\Delta
-	\E}{\Delta t} \mbox{ bzw. } P=\dot{\E} \)
-\item
+	\( \Delta \E = P \cdot \Delta t \quad \Rightarrow \quad P = \frac{\Delta
+	\E}{\Delta t} \) bzw.\ \( P=\dot{\E} \)
+\item \fbox{
 	\( \E = qU \)
+}
 \item
 	\( \frac{e}{m_e} \) (spezifische Ladung)
 \end{itemize}
 
 \subsection{Kondensator}
 \begin{itemize}
-\item
-	\( C = \frac{Q}{U} \)
-\item
+\itemb{
+	\( C = \frac{Q}{U} \quad \Rightarrow \quad Q = CU \) } (merke: Die Kuh
+	bleibt immer gleich)
+\itemb{
 	\( C = \varepsilon_0 \varepsilon_r \cdot \frac{A}{d} \)
-\item
+}
+\itemb{
 	\( \E = \frac{1}{2} C U^2 \)
+}
 \item
 	\( \rho_e = \frac{1}{2} \varepsilon_0 E^2 \) (Energiedichte)
 \item
 	\( \rho_e = \frac{\E}{V} \)
-\item
+\itemb{
 	\( \E = F \cdot d = q \cdot E \cdot d \)
+}
 \item
 	\( E = \frac{U}{d} \)
-\item
+\itemb{
 	\( U = E \cdot d \)
-\item
+}
+\itemb{
 	\( \sigma = \varepsilon_0 \cdot E \)
+}
 \item
 	\( I(t) = \frac{U}{R} = \frac{U_0 - L \cdot \dot{I}(t)}{R} \)
 \end{itemize}
 
 \subsection{Braun’sche Röhre}
 
-nicht merken. Herleitung evtl.\ wissen
+Nicht merken. Herleitung evtl.\ wissen
 \begin{itemize}
 \item
 	\( \frac{v_y}{v_x} = \frac{y_1 - y_s}{B} \)
 \item
-	\( v = \sqrt{2 \cdot \frac{E}{m} \cdot U_a} \)
+	\( v = \sqrt{2 \cdot \frac{E}{m} \cdot U_a} \quad \leftarrow \quad \E_{kin}
+	= \E_{el} \)
 \item
 	\( y_1 = \frac{1}{2} \cdot \frac{U}{d} \cdot \frac{1}{U_a} \cdot s \cdot (b
 	+ \frac{s}{2} ) \)
@@ -112,13 +126,13 @@ nicht merken. Herleitung evtl.\ wissen
 \item
 	\( \dot{Q}(t) = -\frac{1}{RC} \cdot Q(t) \)
 \item[\(\Rightarrow\)]
-	\( Q(t) = Q_0 \cdot e^{-\frac{1}{RC}} \)
+	\( Q(t) = Q_0 \cdot e^{-\frac{1}{RC} \cdot t} \)
 \item
 	\( I(t) = I_0 \cdot e^{-\frac{1}{RC} \cdot t} \)
 \item
 	\( I_0 = \frac{U_0}{R} \)
 \item
-	\( U(t) = -U_0 \cdot e^{-\frac{1}{RC}} \)
+	\( U(t) = -U_0 \cdot e^{-\frac{1}{RC} \cdot t} \)
 \item
 	\( U_0 = R \cdot I(0) \)
 \end{itemize}
@@ -140,35 +154,37 @@ nicht merken. Herleitung evtl.\ wissen
 
 \section{Magnetisches Feld}
 \begin{itemize}
-\item
+\itemb{
 	\( B = \frac{F}{I \cdot l} = \frac{F}{Q \cdot v} \)
+}
 \item
 	Gerader stromdurchflossener Leiter:\\
-	\( B = \mu_0 \cdot \frac{I}{2 \pi r} \)
+	\fbox{\( B = \mu_0 \cdot \frac{I}{2 \pi r} \)}
 \item
-	\( B = \mu_0 \mu_R \cdot I \cdot \frac{n}{l} \)
+	\fbox{\( B = \mu_0 \mu_R \cdot I \cdot \frac{n}{l} \)} (lange Spule)
 \item
-	\( \left( H = \frac{F}{q_{mag}}\ \mathrm{(magnetische\ Feldstärke)} \right)
-	\)
+	\( F_L = I \cdot l \cdot B \cdot \sin \alpha; \quad \alpha =
+	\angle(\vec{I}; \vec{B}) \)
 \item
-	\( F_L = I \cdot l \cdot B \cdot \sin \alpha  \)
-\item
-	\( F_L =  q \cdot v \cdot B \cdot \sin \alpha \)
+	\( F_L =  q \cdot v \cdot B \cdot \sin \alpha; \quad \alpha =
+	\angle(\vec{v}; \vec{B}) \)
 \end{itemize}
 
 \subsection{Induktion}
 \begin{itemize}
-\item
+\itemb{
 	\( U_{ind} = -n \cdot \dot{\Phi} \)
+}
 \item
-	\( \dot{\Phi} = \dot{A} \cdot B + A \cdot \dot{B}; \quad \dot{A} = d \cdot
-	v(t) = d \cdot \frac{s}{t} \)
+	\fbox{\( \dot{\Phi} = \dot{A} \cdot B + A \cdot \dot{B} \)}; \quad (\(
+	\dot{A} = d \cdot v(t) = d \cdot \frac{s}{t} \)) (\( \Phi = A \cdot B \))
 \item
 	\(\left(  U_{ind} = b \cdot B \cdot v \right)\)
 \item
-	\( \dot{B} = \mu_0 \mu_R \cdot \dot{I} \cdot \frac{n}{l} \)
-\item
+	\( \left( \dot{B} = \mu_0 \mu_R \cdot \dot{I} \cdot \frac{n}{l} \right) \)
+\itemb{
 	\( \E_{mag} = \frac{1}{2} \cdot L \cdot I^2 \)
+}
 \item
 	\( \rho_{mag} = \frac{1}{2} \cdot \mu_0 \mu_R \cdot B^2 \)
 \item
@@ -179,13 +195,16 @@ nicht merken. Herleitung evtl.\ wissen
 
 \subsubsection{Selbstinduktion}
 \begin{itemize}
-\item
+\itemb{
 	\( U_{ind} = -L \cdot \dot{I} = -U_L \)
-\item
+}
+\item{
 	\( L = \mu_0 \mu_r \cdot \frac{n^2}{l} \cdot A \)
+}
 \end{itemize}
 
-\subsection{„Abschalten“ der Spule}
+\subsection{„Ein-“ und „Abschalten einer Spule}
+\subsubsection{„Abschalten“}
 \begin{itemize}
 \item
 	\( I(t) = -I_0 \cdot e^{-\frac{R}{L} \cdot t} \)
@@ -193,7 +212,7 @@ nicht merken. Herleitung evtl.\ wissen
 	\( U_L(t) = U_0 \cdot e^{-\frac{R}{L} \cdot t} \)
 \end{itemize}
 
-\subsection{„Einschalten“ der Spule}
+\subsubsection{„Einschalten“}
 \begin{itemize}
 \item
 	\( I(t) = -I_0 \cdot (1 - e^{-\frac{R}{L} \cdot t} ) \)
@@ -216,7 +235,7 @@ nicht merken. Herleitung evtl.\ wissen
 \item
 	\( F_G = m \cdot g \)
 \item
-	\( \phi_{grav} = \frac{\E_{pot}}{m} = g \cdot h \)
+	\( \varphi_{grav} = \frac{\E_{pot}}{m} = g \cdot h \)
 \item
 	\( p = m \cdot v \)
 \item
@@ -233,23 +252,28 @@ nicht merken. Herleitung evtl.\ wissen
 
 \subsection{Harmonischer Oszillator}
 \begin{itemize}
-\item
+\itemb{
 	\( \omega = \sqrt{\frac{D}{m}} \)
-\item
+}
+\item{
 	\( \E_{pot} = \frac{1}{2} \cdot D \cdot y^2 \quad (y = s) \)
+}
 \item
 	\( \E_{kin} = \frac{1}{2} v^2(t) \cdot m = \frac{1}{2} \cdot D \cdot
 	\hat{y}^2 - \frac{1}{2} \cdot D \cdot y^2(t) \)
-\item
+\itemb{
 	\( \E_{ges} = \frac{1}{2} \cdot D \cdot \hat{y}^2 \)
+}
 \end{itemize}
 
 \subsection{Federpendel}
 \begin{itemize}
-\item
+\itemb{
 	\( F_R = -F_D + F_G = -D \cdot y \)
-\item
+}
+\itemb{
 	\( y(t) = \hat{y} \cdot \sin(\omega t) \)
+}
 \item
 	\( \omega = \sqrt{\frac{D}{m}} \)
 \end{itemize}
@@ -257,7 +281,8 @@ nicht merken. Herleitung evtl.\ wissen
 \subsection{Fadenpendel}
 \begin{itemize}
 \item
-	\( F_R = m \cdot g \cdot \sin \alpha = - \frac{m \cdot g}{l} \cdot x \)\\
+	\( F_R = m \cdot g \cdot \sin \alpha = - \frac{m \cdot g}{l} \cdot x = -D
+	\cdot x \)\\
 	\( F_G = F_R \)
 \item
 	\( \omega = \sqrt{\frac{g}{l}} \)
@@ -269,38 +294,41 @@ nicht merken. Herleitung evtl.\ wissen
 
 \subsection{Wellengleichung}
 \begin{itemize}
-\item
+\itemb{
 	\( y(x; t) = \hat{y} \cdot \sin(2 \pi \cdot (\frac{t}{T} -
 	\frac{x}{\lambda}) ) \)
+}
 \end{itemize}
 
 \subsection{Stehende Welle}
 \begin{itemize}
-\item
+\itemb{
 	\( c = \lambda \cdot f \)
+}
 \item
-	\( \lambda_k = 2l/(k+1) \quad k \in \mathbb{N}\)\\
+	\fbox{\( \lambda_k = 2l/(k+1) \quad k \in \mathbb{N} \)}\\
 	(Wellenlängenbedingung bei gleichen Enden)
 \item
-	\( \lambda_k = 4l/(2k+1) \quad k \in \mathbb{N}\)\\
+	\fbox{\( \lambda_k = 4l/(2k+1) \quad k \in \mathbb{N} \)}\\
 	(ein freies und ein festes Ende)
 \item
-	\( f_k = \frac{c}{\lambda_k} \quad k \in \mathbb{N}\)
+	\fbox{\( f_k = \frac{c}{\lambda_k} \quad k \in \mathbb{N} \)}
 \end{itemize}
 
 \subsection{Schwebung}
 \begin{itemize}
 \item
-	\( \Delta f_s = f_1 - f_2 \) (Schwebungsfrequenzbereich)
+	\fbox{\( \Delta f_s = f_1 - f_2 \)} (Schwebungsfrequenzbereich)
 \item
-	\( f_s = \frac{f_1 + f_2}{2} \) (Frequenz der Schwebung)
+	\fbox{\( f_s = \frac{f_1 + f_2}{2} \)} (Frequenz der Schwebung)
 \end{itemize}
 
 \section{Elektromagnetische Schwingungen und Wellen}
 \subsection{Brechung}
 \begin{itemize}
-\item
+\itemb{
 	\( \frac{\sin \alpha}{\sin \beta} = \frac{c_1}{c_2} = n \)
+}
 \item
 	\( n_{1/2} = \frac{n_2}{n_1} \)
 \item
@@ -317,15 +345,16 @@ nicht merken. Herleitung evtl.\ wissen
 \begin{itemize}
 \item
 	\( E = B \cdot c \)
-\item
-	\( c = \frac{1}{\sqrt{\epsilon_0 \cdot \mu_0}} \)
+\itemb{
+	\( c = \frac{1}{\sqrt{\varepsilon_0 \cdot \mu_0}} \)
+}
 \end{itemize}
 
 \subsection{Interferenz}
 \begin{itemize}
 \item
-	\( a_k = \frac{\Delta s}{d} \cdot l; \quad \Delta s = k \cdot \lambda \)
-	(Maximumsbedingung bei Doppelspalt (\( k \in \mathbb{Z} \)),
+	\fbox{\( a_k = \frac{\Delta s}{d} \cdot l \)};\quad\( \Delta s = k \cdot
+	\lambda \) (Maximumsbedingung bei Doppelspalt (\( k \in \mathbb{Z} \)),
 	Minimumsbedingung bei Einzelspalt (\( k \in \mathbb{Z}\setminus\{0\} \))
 \item
 	\( a_k = \frac{\Delta s}{d} \cdot l; \quad \Delta s = (k + \frac{1}{2})
@@ -344,12 +373,16 @@ nicht merken. Herleitung evtl.\ wissen
 \end{itemize}
 
 \subsubsection{Brewster-Winkel}
-\( \tan \alpha = n \)
+\begin{itemize}
+\item
+	\( \left( \tan \alpha = n \right) \)
+\end{itemize}
 
 \section{Quantenphysik}
 \begin{itemize}
-\item
+\itemb{
 	\( \lambda = \frac{h}{p} \)
+}
 \item
 	\( p = m \cdot v \)
 \item
@@ -364,11 +397,12 @@ nicht merken. Herleitung evtl.\ wissen
 
 \subsection{Fotoeffekt}
 \begin{itemize}
-\item
+\itemb{
 	\( \E_{Ph} = \E_{FE} + \E_A = h \cdot f \)
-\item
+}
+\itemb{
 	\( \E_{FE} = h \cdot f - \E_A \)
-
+}
 \end{itemize}
 
 \subsection{Heisenberg’sche Unschärferelationen}
@@ -379,10 +413,12 @@ nicht merken. Herleitung evtl.\ wissen
 	\( \Delta t \cdot \Delta \E = \frac{h}{2} \)
 \item
 	\( \Delta t \cdot \Delta \E \le \frac{h}{4 \cdot \pi} \)
-\item
+\itemb{
 	\( \Delta x \cdot \Delta p_x = \frac{h}{2} \)
-\item
+}
+\itemb{
 	\( \Delta x \cdot \Delta p_x \le \frac{h}{4 \cdot \pi} \)
+}
 \end{itemize}
 
 \subsection{Kohärenz}
@@ -393,15 +429,15 @@ nicht merken. Herleitung evtl.\ wissen
 
 \section{Wärmelehre}
 \begin{itemize}
-\item
+\itemb{
 	\( \Delta S = \frac{\Delta \E}{T} \)
+}
 \item
 	\( P = \Delta T \cdot I_S \)
 \item
 	\( I_S = \frac{\Delta S}{\Delta t} \)
 \end{itemize}
 
-\pagebreak
 \begin{appendix}
 \section{Lizenz}
 \includegraphics[width = 1.5cm]{cc0.png}
